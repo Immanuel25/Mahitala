@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<p><style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-nrix{text-align:center;vertical-align:middle}
+    .tg .tg-8d8j{text-align:center;vertical-align:bottom}
+    </style>
+    <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-nrix" colspan="2">Snack</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-8d8j">Kripik kaca</td>
+        <td class="tg-8d8j">Rp6.000,00</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Sus coklat</td>
+        <td class="tg-8d8j">Rp4.000,00</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Pilus arab</td>
+        <td class="tg-8d8j">Rp3.000,00</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Kue kancing</td>
+        <td class="tg-8d8j">Rp3.000,00</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Gelas kertas</td>
+        <td class="tg-8d8j">-</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Indocafe</td>
+        <td class="tg-8d8j">Rp1.650,00</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Chocolatos</td>
+        <td class="tg-8d8j">Rp2.100,00</td>
+      </tr>
+      <tr>
+        <td class="tg-8d8j">Indomie</td>
+        <td class="tg-8d8j">Rp2.825,00</td>
+      </tr>
+    </tbody>
+    </table>
+
+
+    
+BCA A/N Immanuel Raynaldo
+</p>
+
+<input type="text" value="7025198671" id="myInput">
+
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  Copy text
+  </button>
+</div>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+</body>
+</html>
